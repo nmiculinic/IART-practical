@@ -49,12 +49,12 @@ In order to develop our neural network, we are using Python with Jupyter Noteboo
 
 We first started to experiment with a linear regression learning algorithm, without using TensorFlow library, to see how well it would perform. Then, we analyzed the correlation between the given dataset attributes. We concluded there are some correlations between variables. After that, we use t-SNE to embed data in two dimensions to visualize it.
 
-<img style="float: center;" src="figure1.jpg">
+<img style="float: center;" src="figure1.png">
 Figure 1 - t-SNE Data Visualization
 
 Using K-Means clustering, we further tried to check if there were some exploits in input data, but we didn't find any.
 
-<img style="float: center;" src="figure2.jpg">
+<img style="float: center;" src="figure2.png">
 
 Our first approach was Mini-Batch Stochastic Gradient Descent, used to minimize an objective function written as a sum of differentiable functions, with exponential decay learning rate and with varied network architetures im order to optimize and get better results. However, to get faster optimizations, we applied Adam Optimizer (check chapter 7, "Resources") and Batch normalization techniques. For further generalization, we are trying L2 regularization on weight.
 
