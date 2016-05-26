@@ -49,13 +49,13 @@ In order to develop our neural network, we are using Python with Jupyter Noteboo
 
 We first started to experiment with a linear regression learning algorithm, without using TensorFlow library, to see how well it would perform. Then, we analyzed the correlation between the given dataset attributes. We concluded there are some correlations between variables. After that, we use t-SNE to embed data in two dimensions to visualize it.
 
-<img style="text-align:center" src="figure1.png">
+<img style="text-align:center;" src="figure1.png">
 
 <sup>Figure 1 - t-SNE Data Visualization</sup>
 
 Using K-Means clustering, we further tried to check if there were some exploits in input data, but we didn't find any.
 
-<img style="text-align:center" src="figure2.png">
+<img style="text-align:center;" src="figure2.png">
 
 <sup>Figure 2</sup>
 
