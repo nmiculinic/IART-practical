@@ -56,7 +56,7 @@ We used five nearest-neighbours to interpolate the prediction.
 
 # 4. Experiments <a name="exp"></a>
 
-We first started to experiment with a linear regression learning algorithm, without using TensorFlow library, to see how well it would perform. However, it turned out to be a bad predictor.
+We first started to experiment with a linear regression learning algorithm to see how well it would perform. However, it turned out to be a bad predictor.
 
 Then, we analyzed the correlation between the given dataset attributes and concluded there are some correlations between variables. After that, we used t-SNE to embed data in two dimensions in order to visualize it, as you can see in the following figure. T-SNE is non-parametric data dimensionality reduction, which preserves local structures.
 
@@ -70,7 +70,7 @@ With K-Means clustering, we divided our data into eight clusters and plotted the
 
 <sup>Figure 2 - Log share distribution per cluster</sup>
 
-Our first approach was Mini-Batch Stochastic Gradient Descent with a batch size of 64, an algorithm used to minimize an objective function written as a sum of differentiable functions. We applied it with exponential decay learning rate and with varied network architetures (1-3 hidden layers with 10-100-1000 [relu](#res3) neurons), in order to optimize and get better results. However, to get even better optimizations, we applied [Adam Optimizer](#res1) and [Batch Normalization](#res2) techniques. Also, for further generalization, we tried L2 regularization on weights. 
+Our first approach was Mini-Batch Stochastic Gradient Descent with a batch size of 64, an algorithm used to minimize an objective function written as a sum of differentiable functions. We applied it with exponential decay learning rate and with varied network architetures (1-3 hidden layers with 10-100-1000 [relu](#res3) neurons), in order to optimize and get better results. However, we applied [Adam Optimizer](#res1) and [Batch Normalization](#res2) techniques to speed up our trainings. Also, for further generalization, we tried L2 regularization on weights. 
 
 <div style="page-break-after: always;"></div>
 
