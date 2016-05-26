@@ -51,13 +51,13 @@ We first started to experiment with a linear regression learning algorithm, with
 
 <img style="text-align:center" src="figure1.png">
 
-Figure 1 - t-SNE Data Visualization
+<sup>Figure 1 - t-SNE Data Visualization</sup>
 
 Using K-Means clustering, we further tried to check if there were some exploits in input data, but we didn't find any.
 
 <img style="text-align:center" src="figure2.png">
 
-Figure 2
+<sup>Figure 2</sup>
 
 
 Our first approach was Mini-Batch Stochastic Gradient Descent, used to minimize an objective function written as a sum of differentiable functions, with exponential decay learning rate and with varied network architetures im order to optimize and get better results. However, to get faster optimizations, we applied Adam Optimizer (check chapter 7, "Resources") and Batch normalization techniques. For further generalization, we are trying L2 regularization on weight.
