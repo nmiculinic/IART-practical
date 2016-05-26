@@ -4,7 +4,7 @@
 ## Neural Network for News Popularity Prediction
 ### Artificial Intelligence
 
-##### Ricardo Magalhães & Neven Miculinic
+##### Neven Miculinic & Ricardo Magalhães
 ##### Integrated Master of Informatics and Computer Engineering
 
 <div style="page-break-after: always;"></div>
@@ -22,7 +22,7 @@
 
 # 1. Goal <a name="goal"></a>
 
-The goal of this project is to implement an artificial neural network for predicting news popularity, based on number of social network shares. The dataset is from two years of Mashable articles, summarizing an heterogenous set of features. We should succesfully train a multi-layer neural network, in order to get a model capable of predicting new articles. In order to achieve that, the "Back-Propagation" algorithm should be implemented and used.
+The goal of this project is to implement an artificial neural network for predicting news popularity, based on number of social network shares. The dataset is from two years of Mashable articles, summarizing an heterogenous set of features. We should succesfully train a multi-layer neural network, in order to get a model capable of predicting new articles social network number of shares. 
 
 <div style="page-break-after: always;"></div>
 
@@ -32,14 +32,22 @@ In this project data set, we have 58 predictive attributes, where some of it are
 
 The articles were published by Mashable (www.mashable.com) and their content as the rights to reproduce it belongs to them. Hence, this dataset does not share the original content but some statistics associated with it. The original content be publicly accessed and retrieved using the provided urls. It was acquired on January 8, 2015. 
 
-We are going to scale all input features to [0,1] range. Also, we are going to divide our data set into three parts: training set (70%), cross validation (15%) and test set (15%).  
+We are going to scale all input features to [0,1] range. Also, we are going to divide our data set into three parts: training set (70%), cross validation (15%) and test set (15%). Categorical variables, such as day of the week and news category are already one-hot encoded.
 For base line prediction, we are going to use k-nearest-neighbour regression from sklearn Python library. Our aim is to implement a neural network, which has a better score than base line prediction. The cost function we are going to use to evaluate our news prediction score is mean squared error on data set.
 
 <div style="page-break-after: always;"></div>
 
 # 3. Development <a name="dev"></a>
 
-In order to develop our neural network, we are using Python with Jupyter Notebook, previously known as IPython, to ease our work. There are a number of libraries used to help our development, such as TensorFlow, Sklearn, TFLearn, NumPy, Pandas and Seaborn.
+In order to develop our neural network, we are using Python with Jupyter Notebook, previously known as IPython, to ease our work. There are a number of libraries used to help our development, such as:
+such as TensorFlow, Sklearn, TFLearn, NumPy, Pandas and Seaborn, desc
+
+1. TensorFlow is a open-source software library for numerical computation using data flow graphs; we are using it for all our computation.
+2. Sklearn is machine-learning library for Python; we use it preprocessing the data and using off the shelf k-NN regressor.
+3. TFLearn is high-level TensorFlow API; we are using it to simplify our TensorFlow graph construction.
+4. NumPy is a Python package for scientific computing.
+5. Pandas is a open-source library for high-perfomance and easy-to-use data strucutres; we are using it for data loading and plotting.
+6. Seaborn is a data visualization library; we are using it for plotting.
 
 We used five nearest-neighbours to interpolate the prediction. 
 
@@ -50,7 +58,7 @@ We used five nearest-neighbours to interpolate the prediction.
 
 We first started to experiment with a linear regression learning algorithm, without using TensorFlow library, to see how well it would perform. However, it turned out to be a bad predictor.
 
-Then, we analyzed the correlation between the given dataset attributes and concluded there are some correlations between variables. After that, we used t-SNE to embed data in two dimensions in order to visualize it, as you can see in the following figure. 
+Then, we analyzed the correlation between the given dataset attributes and concluded there are some correlations between variables. After that, we used t-SNE to embed data in two dimensions in order to visualize it, as you can see in the following figure. T-SNE is non-parametric data dimensionality reduction, which preserves local structures.
 
 <img style="text-align:center;" src="figure1.png">
 
@@ -93,3 +101,4 @@ To better improve our predictions, as said in the [Conclusion](#con), we either 
 3. "Efficient Backdrop" paper, 1998; Yann LeCun, Leon Bottou, Genevieve B. Orr, Klaus-Robert Müller; http://yann.lecun.com/exdb/publis/pdf/lecun-98b.pdf <a name="res3"></a>
 4. "Artificial Intelligence: A Modern Approach" book, 3rd edition, December 2009; Peter Norvig, Stuart Russell
 5. "Neural Networks and Deep Learning" web page, January 2016; Michael Nielsen; http://neuralnetworksanddeeplearning.com/
+6. "Visualizing High-Dimensional Data Using t-SNE" paper, November 2008; L.J.P. van der Maaten and G.E. Hinton; https://lvdmaaten.github.io/publications/papers/JMLR_2008.pdf
