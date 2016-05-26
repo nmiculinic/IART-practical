@@ -70,7 +70,9 @@ With K-Means clustering, we divided our data into eight clusters and plotted the
 
 <sup>Figure 2 - Log share distribution per cluster</sup>
 
-Our first approach was Mini-Batch Stochastic Gradient Descent with a batch size of 64, an algorithm used to minimize an objective function written as a sum of differentiable functions. We applied it with exponential decay learning rate and with varied network architetures (1-3 hidden layers with 10-100-1000 [relu](#res3) neurons), in order to optimize and get better results. However, we applied [Adam Optimizer](#res1) and [Batch Normalization](#res2) techniques to speed up our trainings. Also, for further generalization, we tried L2 regularization on weights. 
+Our first approach was Mini-Batch Stochastic Gradient Descent with a batch size of 64, an algorithm used to minimize an objective function written as a sum of differentiable functions. We applied it with exponential decay learning rate and with varied network architetures (1-3 hidden layers with 10-100-1000 [relu](#res3) neurons), in order to optimize and get better results. However, we applied [Adam Optimizer](#res1) and [Batch Normalization](#res2) techniques to speed up our trainings. Also, for further generalization, we tried L2 regularization with various penalties on weights, but it didn't seem to change the model much.
+
+The model itselt proved to be hard to overfit, because of small number of features, which behave stochastically on the number of shares.
 
 <div style="page-break-after: always;"></div>
 
